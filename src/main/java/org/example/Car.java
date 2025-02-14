@@ -1,7 +1,5 @@
 package org.example;
 
-import java.lang.invoke.VarHandle;
-
 public class Car extends Vehicle implements Rentable{
     private int numSeats;
     private String fuelType;
@@ -17,6 +15,6 @@ public class Car extends Vehicle implements Rentable{
     }
 
     public double calculateRentalCost(int days) {
-
+        return days * this.rentalPricePerDay;
     }
 }
