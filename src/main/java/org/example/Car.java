@@ -10,10 +10,17 @@ public class Car extends Vehicle implements Rentable{
         this.fuelType = fuelType;
     }
 
+    @Override
     public void displayDetails() {
-        System.out.println("Number of seats is " + numSeats + " and fuel type is " + fuelType);
+        System.out.println("Car: ");
+        System.out.println("License Plate: " + licensePlate);
+        System.out.println("Brand: " + brand);
+        System.out.println("Rental Price Per Day: $" + rentalPricePerDay);
+        System.out.println("Number of Seats: " + numSeats);
+        System.out.println("Fuel Type: " + fuelType);
     }
 
+    @Override
     public double calculateRentalCost(int days) {
         return days * this.rentalPricePerDay;
     }

@@ -14,7 +14,11 @@ public class MotorCycle extends Vehicle implements Rentable{
     @Override
     public void displayDetails() {
         System.out.println("Motorcycle: ");
-        System.out.println("Engine capacity is " + engineCapacity);
+        System.out.println("License Plate: " + licensePlate);
+        System.out.println("Brand: " + brand);
+        System.out.println("Rental Price Per Day: $" + rentalPricePerDay);
+        System.out.println("Engine capacity: " + engineCapacity + "cc");
+        System.out.println("Helmet Included: " + (hasHelmet ? "Yes": "No"));
     }
 
     @Override

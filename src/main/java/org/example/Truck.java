@@ -12,14 +12,17 @@ public class Truck extends Vehicle implements Rentable{
     }
 
     @Override
-    public double calculateRentalCost(int days) {
-        return 0;
+    public void displayDetails() {
+        System.out.println("Truck:");
+        System.out.println("License Plate: " + licensePlate);
+        System.out.println("Brand: " + brand);
+        System.out.println("Rental Price Per Day: $" + rentalPricePerDay);
+        System.out.println("Cargo Capacity: " + cargoCapacity + "kg");
+        System.out.println("Number of Axles: " + numAxles);
     }
 
     @Override
-    public void displayDetails() {
-        System.out.println("Truck:");
-        System.out.println("Cargo capacity: " + cargoCapacity);
-        System.out.println("Number of axles: " + numAxles);
+    public double calculateRentalCost(int days) {
+        return days * rentalPricePerDay;
     }
 }
