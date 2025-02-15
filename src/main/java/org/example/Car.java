@@ -4,7 +4,7 @@ public class Car extends Vehicle implements Rentable{
     private int numSeats;
     private String fuelType;
 
-    public Car(int numSeats, String fuelType, String licensePlate, String brand, double rentalPricePerDay) {
+    public Car(String licensePlate, String brand, double rentalPricePerDay, int numSeats, String fuelType) {
         super(licensePlate, brand, rentalPricePerDay);
         this.numSeats = numSeats;
         this.fuelType = fuelType;
